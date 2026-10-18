@@ -16,6 +16,14 @@ steps:
   inputs:
     terraformVersion: '1.9.8'
 
+- script: |
+      echo "Repository root:"
+      ls -la "$(System.DefaultWorkingDirectory)"
+
+      echo "Terraform configuration files:"
+      find "$(System.DefaultWorkingDirectory)" -type f \
+        \( -name "*.tf" -o -name "*.tf.json" \)
+  displayName: 'Verify Terraform files'
 - task: TerraformTask@5
   displayName: Terraform Init
   inputs:
