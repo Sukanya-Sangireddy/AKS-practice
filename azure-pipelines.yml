@@ -33,5 +33,6 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'plan'
-    environmentServiceNameAzureRM: 'sukanya-sangireddy(ed7431f1-0b5d-4297-b517-7f4bbb9bbc19)'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
+    environmentServiceNameAzureRM: 'sukanya-sangireddy(1)(ed7431f1-0b5d-4297-b517-7f4bbb9bbc19)'
     environmentAzureRmOverrideSubscriptionID: 'ed7431f1-0b5d-4297-b517-7f4bbb9bbc19'
